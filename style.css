@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("organizer.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1200px;
+  height: 100vh;
+  padding-top: 100px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+}
+
+.wrapper form {
+  height: 50px;
+  margin: 30px auto 60px;
+}
+
+.wrapper form .addTask {
+  height: 60px;
+  width: 400px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: none;
+  padding: 0 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.wrapper form .addTask::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.wrapper form .addTask:-ms-input-placeholder {
+  color: #fff;
+}
+
+.wrapper form .addTask::-ms-input-placeholder {
+  color: #fff;
+}
+
+.wrapper form .addTask::placeholder {
+  color: #fff;
+}
+
+@media (min-height: 1024px) {
+  .wrapper form .addTask {
+    width: 500px;
+    height: 80px;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .wrapper form .addTask {
+    width: 80vw;
+    height: 50px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+}
+
+.wrapper form .addTaskBtn {
+  height: 60px;
+  width: 80px;
+  margin-left: 20px;
+  padding: 0 15px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #34d6ae;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.wrapper form .addTaskBtn:hover {
+  color: #13af88;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-height: 1024px) {
+  .wrapper form .addTaskBtn {
+    width: 120px;
+    height: 80px;
+    padding: 0 20px;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .wrapper form .addTaskBtn {
+    width: 120px;
+    height: 40px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .wrapper {
+    padding-top: 50px;
+  }
+}
+
+.tasks {
+  max-height: 80vh;
+}
+
+.tasks .search {
+  width: 300px;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.tasks .search::-webkit-input-placeholder {
+  color: #fff;
+  text-align: center;
+}
+
+.tasks .search:-ms-input-placeholder {
+  color: #fff;
+  text-align: center;
+}
+
+.tasks .search::-ms-input-placeholder {
+  color: #fff;
+  text-align: center;
+}
+
+.tasks .search::placeholder {
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-height: 1024px) {
+  .tasks .search {
+    width: 500px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .tasks .search {
+    width: 200px;
+  }
+}
+
+.tasks p {
+  margin: 40px auto;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.tasks p span {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+@media (min-height: 1024px) {
+  .tasks p span {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-height: 1024px) {
+  .tasks p {
+    font-size: 1.8rem;
+  }
+}
+
+.tasks .listTask {
+  width: 400px;
+  margin: 20px auto 0;
+}
+
+.tasks .listTask .task {
+  position: relative;
+  padding: 15px 0;
+  text-align: left;
+  color: #fff;
+  font-size: 1.5rem;
+  border-bottom: #fff 1px solid;
+}
+
+.tasks .listTask .task button {
+  position: absolute;
+  right: 0;
+  width: 60px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #fff;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.tasks .listTask .task button:hover {
+  cursor: pointer;
+  color: #a02121;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-height: 1024px) {
+  .tasks .listTask .task button {
+    width: 80px;
+    height: 50px;
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-height: 1024px) {
+  .tasks .listTask .task {
+    font-size: 2rem;
+    padding: 20px 0;
+  }
+}
+
+@media (min-height: 1024px) {
+  .tasks .listTask {
+    width: 600px;
+  }
+}
+
+@media (max-width: 420px) {
+  .tasks .listTask {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 420px) {
+  .tasks {
+    padding-top: 10px;
+  }
+}
+/*# sourceMappingURL=style1.css.map */
